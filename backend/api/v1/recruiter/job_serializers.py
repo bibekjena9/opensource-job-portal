@@ -654,3 +654,4 @@ class ApplicantDetailSerializer(serializers.ModelSerializer):
             })
 
         return certifications
+

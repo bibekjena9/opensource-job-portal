@@ -369,3 +369,9 @@ class UpdateProfileSerializer(serializers.Serializer):
             setattr(instance, field, value)
         instance.save()
         return instance
+    
+from rest_framework import serializers
+
+class AcceptInvitationSerializer(serializers.Serializer):
+    email = serializers.EmailField(required=False)
+    token = serializers.CharField(required=False)
