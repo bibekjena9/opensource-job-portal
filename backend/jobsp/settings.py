@@ -4,9 +4,11 @@ from celery.schedules import crontab
 from corsheaders.defaults import default_headers, default_methods
 from dotenv import load_dotenv
 
-load_dotenv()
+# load_dotenv()
 
 BASE_DIR = os.path.dirname(os.path.dirname(__file__))
+PROJECT_ROOT = os.path.dirname(BASE_DIR)
+load_dotenv(os.path.join(PROJECT_ROOT, ".env"))
 
 DEBUG = os.getenv("DEBUG", True)
 TEMPLATE_DEBUG = DEBUG
